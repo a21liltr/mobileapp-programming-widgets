@@ -22,6 +22,8 @@ buildFeatures {
     }
 ```
 
+Ändrade (R.layout.activity_main); till (binding.getRoot());
+
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](android.png)
