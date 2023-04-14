@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Widgets</string>
-    <string name="button_value">Button</string>
+    <string name="buttonYes_value">That\'s my name!</string>
+    <string name="buttonNo_value">That\'s incorrect!</string>
     <string name="image_description">Profile picture</string>
     <string name="textView_value">What is your name?</string>
 </resources>
