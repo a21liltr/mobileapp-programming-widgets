@@ -1,31 +1,27 @@
 package com.example.widgets;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.widgets.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
     ActivityMainBinding binding;
+    MyListener listener;
+    //Button setName;
+    //Button clear;
 
+    String input;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        listener = new MyListener(binding.editName);
 
-                String input = binding.editName.getText().toString();
-                binding.textView.setText("Hello " + input + "!");
-                binding.editName.setVisibility(View.GONE);
-                binding.button.setVisibility(View.GONE);
-            }
-        });
+        binding.buttonYes.setOnClickListener(listener);
+        binding.buttonNo.setOnClickListener(listener);
     }
 }
