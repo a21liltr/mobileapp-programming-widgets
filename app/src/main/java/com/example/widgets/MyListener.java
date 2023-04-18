@@ -8,28 +8,28 @@ import com.example.widgets.databinding.ActivityMainBinding;
 
 public class MyListener implements View.OnClickListener{
     ActivityMainBinding binding;
-    private String input;
+    String input;
 
-    public MyListener() {
+    public MyListener(String editName) {
         System.out.println("Something was clicked");
+        input = editName;
     }
 
     @Override
     public void onClick(View view) {
-        input = binding.editName.getText().toString();
 
         switch (view.getId()) {
             case R.id.buttonNo:
-                if (binding.editName.getText().equals(null)) {
-                    System.out.println("Already blank");
-                    return;
+                if (input.equals("")) {
+                    System.out.println("Blank");
+                    break;
                 }
                 binding.editName.getText().clear();
                 System.out.println("111");
                 break;
             case R.id.buttonYes:
-                if (binding.editName.getText().equals(null)) {
-                    System.out.println("Name is blank");
+                if (input.equals("")) {
+                    System.out.println("Input is blank");
                     return;
                 }
                 binding.textView.setText("Hello " + input + "!");

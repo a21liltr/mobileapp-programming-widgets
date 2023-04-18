@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        listener = new MyListener(binding.editName);
+        String input = binding.editName.getText().toString();
+        listener = new MyListener(input);
 
         binding.buttonYes.setOnClickListener(listener);
         binding.buttonNo.setOnClickListener(listener);
