@@ -2,7 +2,6 @@ package com.example.widgets;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.widgets.databinding.ActivityMainBinding;
@@ -10,10 +9,9 @@ import com.example.widgets.databinding.ActivityMainBinding;
 public class MyListener implements View.OnClickListener{
     ActivityMainBinding binding;
     private String input;
-    private EditText editName;
 
-    public MyListener(EditText editText) {
-        editName = editText;
+    public MyListener() {
+        System.out.println("Something was clicked");
     }
 
     @Override
