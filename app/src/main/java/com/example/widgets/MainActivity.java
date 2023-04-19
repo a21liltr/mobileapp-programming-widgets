@@ -9,10 +9,6 @@ import com.example.widgets.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     MyListener listener;
-    //Button setName;
-    //Button clear;
-
-    String input;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
